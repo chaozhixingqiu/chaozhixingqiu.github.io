@@ -1,0 +1,417 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>一切用数据说话 · 应用统计学与R语言实现学习笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Qiaoshengchuan">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="0P4数字与数学思维1.html" />
+    
+    
+    <link rel="prev" href="0P2统计学发展简史.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于本教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="0P1统计学研究不确定性.html">
+            
+                <a href="0P1统计学研究不确定性.html">
+            
+                    
+                    统计学前述
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="0P1统计学研究不确定性.html">
+            
+                <a href="0P1统计学研究不确定性.html">
+            
+                    
+                    统计学研究不确定性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="0P2统计学发展简史.html">
+            
+                <a href="0P2统计学发展简史.html">
+            
+                    
+                    统计学发展简史
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="0P3一切用数据说话.html">
+            
+                <a href="0P3一切用数据说话.html">
+            
+                    
+                    一切用数据说话
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="0P4数字与数学思维1.html">
+            
+                <a href="0P4数字与数学思维1.html">
+            
+                    
+                    数字与数据思维1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="0P5数字与数学思维2.html">
+            
+                <a href="0P5数字与数学思维2.html">
+            
+                    
+                    数字与数学思维2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="0P6数字与数学思维3.html">
+            
+                <a href="0P6数字与数学思维3.html">
+            
+                    
+                    数字与数学思维3
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="1统计学概论.html">
+            
+                <a href="1统计学概论.html">
+            
+                    
+                    统计学概论
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="1P统计学及其研究领域.md">
+            
+                <span>
+            
+                    
+                    统计学及其研究领域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="1P总体与样本、参数与统计量.html">
+            
+                <a href="1P总体与样本、参数与统计量.html">
+            
+                    
+                    总体与样本、参数与统计量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="1P描述统计与推断统计.md">
+            
+                <span>
+            
+                    
+                    描述统计与推断统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="2描述统计学.md">
+            
+                <span>
+            
+                    
+                    描述统计学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="3推理统计学.md">
+            
+                <span>
+            
+                    
+                    推理统计学
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >一切用数据说话</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7EDF;&#x8BA1;&#x5B66;&#x7684;&#x6838;&#x5FC3;&#x601D;&#x60F3;&#xFF1A;&#x4E00;&#x5207;&#x7528;&#x6570;&#x636E;&#x8BF4;&#x8BDD;">&#x7EDF;&#x8BA1;&#x5B66;&#x7684;&#x6838;&#x5FC3;&#x601D;&#x60F3;&#xFF1A;&#x4E00;&#x5207;&#x7528;&#x6570;&#x636E;&#x8BF4;&#x8BDD;</h1>
+<p>&#x5927;&#x5BB6;&#x597D;&#xFF0C;&#x6211;&#x662F;&#x8001;&#x4E54;&#xFF0C;&#x8FD9;&#x91CC;&#x662F;&#x8D85;&#x667A;&#x661F;&#x7403;&#x7684;&#x300A;&#x8D85;&#x667A;&#xB7;&#x7EDF;&#x8BA1;&#x5B66;&#x300B;&#x7CFB;&#x5217;&#x8BFE;&#x7A0B;&#x3002;</p>
+<p>&#x5728;&#x524D;&#x6587;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x63CF;&#x7ED8;&#x4E86;&#x7EDF;&#x8BA1;&#x5B66;&#x662F;&#x4E00;&#x95E8;&#x5173;&#x4E8E;&#x6570;&#x636E;&#x7684;&#x5B66;&#x95EE;&#xFF0C;&#x5176;&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x7814;&#x7A76;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#x3002;</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x5462;&#xFF0C;&#x5728;&#x672C;&#x6587;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4E86;&#x89E3;&#x7EDF;&#x8BA1;&#x5B66;&#x7684;&#x6838;&#x5FC3;&#x7406;&#x5FF5;&#xFF0C;&#x4EE5;&#x53CA;&#x6211;&#x6BCF;&#x5468;&#x672B;&#x90FD;&#x4F1A;&#x70B9;&#x7684;&#x80A5;&#x5B85;&#x5FEB;&#x4E50;&#x5957;&#x9910;&#x3002;</p>
+<h2 id="&#x5148;&#x4ECE;&#x80A5;&#x5B85;&#x5FEB;&#x4E50;&#x5957;&#x9910;&#x8BF4;&#x8D77;">&#x5148;&#x4ECE;&#x80A5;&#x5B85;&#x5FEB;&#x4E50;&#x5957;&#x9910;&#x8BF4;&#x8D77;</h2>
+<p>&#x6BCF;&#x5230;&#x5468;&#x672B;&#xFF0C;&#x7ED3;&#x675F;&#x4E86;&#x4E00;&#x5468;&#x7684;&#x5DE5;&#x4F5C;&#xFF0C;&#x6211;&#x90FD;&#x4F1A;&#x70B9;&#x4E0A;&#x4E86;&#x4E00;&#x4EFD;&#x5FEB;&#x4E50;&#x5957;&#x9910;(&#x62AB;&#x8428;&#x3001;&#x85AF;&#x6761;&#x3001;&#x9E21;&#x7FC5;&#x3001;&#x51B0;&#x9547;&#x5FEB;&#x4E50;&#x6C34;)&#xFF0C;&#x7136;&#x540E;&#x7F8E;&#x6ECB;&#x6ECB;&#x7684;&#x5F00;&#x59CB;&#x8FFD;&#x5267;&#xFF0C;&#x51C6;&#x5907;&#x8D85;&#x723D;&#x7684;&#x751F;&#x6D3B;&#x3002;&#x7B49;&#x5F85;&#x7740;&#x5916;&#x5356;&#x5C0F;&#x54E5;&#x8D76;&#x7D27;&#x4E0A;&#x95E8;&#x3002;
+<img src="../media/15902394285403.jpg" alt=""></p>
+<p>&#x4F46;&#x5403;&#x5B8C;&#x540E;&#xFF0C;&#x809A;&#x5B50;&#x5F88;&#x6491;&#xFF0C;&#x6536;&#x62FE;&#x9910;&#x76D8;&#xFF0C;&#x5C31;&#x89C9;&#x5F97;&#x5176;&#x5B9E;&#x5916;&#x5356;&#x5403;&#x8D77;&#x6765;&#x4E5F;&#x6CA1;&#x6709;&#x90A3;&#x4E48;&#x597D;&#x5403;&#x3002;&#x660E;&#x660E;&#x4E5F;&#x6CA1;&#x90A3;&#x4E48;&#x597D;&#x5403;&#xFF0C;&#x8FD8;&#x5468;&#x672B;&#x90FD;&#x8981;&#x70B9;&#x4E00;&#x4EFD;&#x6765;&#x5403;&#xFF0C;&#x5C31;&#x5F88;&#x602A;&#x5F02;&#x3002;</p>
+<p>&#x6211;&#x53EF;&#x80FD;&#x4F1A;&#x60F3;&#xFF0C;&#x6211;&#x4E3A;&#x4EC0;&#x4E48;&#x5468;&#x672B;&#x4F1A;&#x9009;&#x62E9;&#x8981;&#x5403;&#x8FD9;&#x79CD;&#x4E1C;&#x897F;&#xFF1F;&#x5B83;&#x63A7;&#x5236;&#x4E86;&#x6211;&#x7684;&#x5468;&#x672B;&#x751F;&#x6D3B;&#x5417;&#xFF1F;&#x8FD9;&#x4E48;&#x591A;&#x6837;&#x98DF;&#x54C1;&#x91CC;&#x9762;&#xFF0C;&#x6211;&#x66F4;&#x7231;&#x5403;&#x54EA;&#x4E00;&#x6837;&#xFF0C;&#x8FD8;&#x662F;&#x5E26;&#x7ED9;&#x6211;&#x5FEB;&#x611F;&#x7684;&#xFF0C;&#x5168;&#x9760;&#x90A3;&#x676F;&#x51B0;&#x9547;&#x5FEB;&#x4E50;&#x6C34;&#x3002;
+<img src="../media/15902414951550.jpg" alt=""></p>
+<p>&#x4F46;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#x6211;&#x66F4;&#x5E0C;&#x671B;&#x77E5;&#x9053;&#xFF0C;&#x5927;&#x5BB6;&#x4F1A;&#x4E0D;&#x4F1A;&#x6709;&#x7740;&#x8DDF;&#x6211;&#x4E00;&#x6837;&#x7684;&#x60C5;&#x51B5;&#x3002;&#x5927;&#x5BB6;&#x51FA;&#x4E8E;&#x4EC0;&#x4E48;&#x539F;&#x56E0;&#x4F1A;&#x9009;&#x62E9;&#x5403;&#x5FEB;&#x9910;&#xFF1F;&#x5468;&#x672B;&#x5403;&#x5FEB;&#x9910;&#x7684;&#x4EBA;&#x4F1A;&#x6BD4;&#x5E73;&#x65F6;&#x591A;&#x5417;&#xFF1F;&#x5927;&#x5BB6;&#x6BCF;&#x6B21;&#x5FEB;&#x9910;&#x5E73;&#x5747;&#x6D88;&#x8D39;&#x591A;&#x5C11;&#xFF1F;&#x5927;&#x5BB6;&#x4F1A;&#x504F;&#x597D;&#x5728;&#x5468;&#x672B;&#x7684;&#x54EA;&#x4E00;&#x987F;&#x5B89;&#x6392;&#x5403;&#x5FEB;&#x9910;&#xFF1F;&#x6BCF;&#x5468;&#x5403;&#x5FEB;&#x9910;&#x4F1A;&#x6709;&#x5BB3;&#x5417;&#xFF1F;&#x5403;&#x5FEB;&#x9910;&#x8DDF;&#x91CA;&#x653E;&#x538B;&#x529B;&#x6709;&#x5173;&#x5417;&#xFF1F;&#x5403;&#x5FEB;&#x9910;&#x4F1A;&#x8BA9;&#x6211;&#x5FEB;&#x4E50;&#x5417;&#xFF1F;</p>
+<p>&#x8FD9;&#x4E9B;&#x95EE;&#x9898;&#x53EF;&#x80FD;&#x90FD;&#x633A;&#x4E0D;&#x9519;&#x7684;&#xFF0C;&#x4F46;&#x5728;&#x672C;&#x6587;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x6709;&#x4E00;&#x4E2A;&#x66F4;&#x91CD;&#x8981;&#x7684;&#x95EE;&#x9898;&#x8981;&#x95EE;&#xFF1A;<strong>&#x7EDF;&#x8BA1;&#x5B66;&#x80FD;&#x89E3;&#x51B3;&#x8FD9;&#x4E9B;&#x95EE;&#x9898;&#x5417;&#xFF1F;</strong></p>
+<h2 id="&#x7EDF;&#x8BA1;&#x5B66;&#x4E00;&#x5207;&#x7528;&#x6570;&#x636E;&#x8BF4;&#x8BDD;">&#x7EDF;&#x8BA1;&#x5B66;&#x4E00;&#x5207;&#x7528;&#x6570;&#x636E;&#x8BF4;&#x8BDD;</h2>
+<p>&#x4E0A;&#x671F;&#x6211;&#x4EEC;&#x8BF4;&#x7EDF;&#x8BA1;&#x5B66;&#x7814;&#x7A76;&#x201C;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#x201D;&#xFF0C;&#x4EE5;&#x4E0A;&#x95EE;&#x9898;&#xFF0C;&#x5176;&#x5B9E;&#x90FD;&#x662F;&#x201D;&#x4E0D;&#x786E;&#x5B9A;&#x7684;&#x95EE;&#x9898;&#x201C;&#x3002;&#x90A3;&#x662F;&#x4E0D;&#x662F;&#x7EDF;&#x8BA1;&#x5B66;&#x53EF;&#x4EE5;&#x7ED9;&#x51FA;&#x7B54;&#x6848;&#xFF1F;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x901A;&#x8FC7;&#x8BE5;&#x7EDF;&#x8BA1;&#x5B66;&#x5F97;&#x51FA;&#x4E0A;&#x8FF0;&#x95EE;&#x9898;&#x7684;&#x7B54;&#x6848;&#xFF1F;</p>
+<p>&#x501F;&#x52A9;&#x7EDF;&#x8BA1;&#x5B66;&#x5F88;&#x5BB9;&#x6613;&#x76F4;&#x63A5;&#x56DE;&#x7B54;&#x201C;&#x4EBA;&#x4EEC;&#x5E73;&#x5747;&#x6BCF;&#x5468;&#x5403;&#x51E0;&#x987F;&#x5FEB;&#x9910;&#xFF1F;&#x4EBA;&#x4EEC;&#x6BCF;&#x6B21;&#x5FEB;&#x9910;&#x5E73;&#x5747;&#x6D88;&#x8D39;&#x591A;&#x5C11;&#xFF1F;&#x201D;&#x7684;&#x95EE;&#x9898;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x505A;&#x4E00;&#x4EFD;&#x95EE;&#x5377;&#x3002;&#x8C03;&#x67E5;&#x4EBA;&#x4EEC;&#x5403;&#x5FEB;&#x9910;&#x7684;&#x996E;&#x98DF;&#x4E60;&#x60EF;&#x3002;&#x6709;&#x4E86;&#x8C03;&#x67E5;&#x7684;&#x7ED3;&#x679C;&#x540E;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x5F97;&#x51FA; &#x4EBA;&#x4EEC;&#x5403;&#x5FEB;&#x9910;&#x53EA;&#x662F;&#x56FE;&#x7701;&#x4E8B; &#x6216;&#x8005; &#x4EBA;&#x4EEC;&#x5E73;&#x5747;&#x4E00;&#x5468;&#x5403;2&#x6B21;&#x5FEB;&#x9910;&#x8FD9;&#x6837;&#x7684;&#x7ED3;&#x8BBA;&#x3002;
+<img src="../media/15902409839115.jpg" alt=""></p>
+<p>&#x4F46;&#x662F;&#x201C;&#x5927;&#x5BB6;&#x51FA;&#x4E8E;&#x4EC0;&#x4E48;&#x539F;&#x56E0;&#x4F1A;&#x9009;&#x62E9;&#x5403;&#x5FEB;&#x9910;&#xFF1F;&#x5403;&#x5FEB;&#x9910;&#x8DDF;&#x91CA;&#x653E;&#x538B;&#x529B;&#x6709;&#x5173;&#x5417;&#xFF1F;&#x5403;&#x5FEB;&#x9910;&#x4F1A;&#x8BA9;&#x6211;&#x5FEB;&#x4E50;&#x5417;&#xFF1F;&#x201D;&#x5374;&#x5E76;&#x4E0D;&#x9002;&#x5408;&#x76F4;&#x63A5;&#x56DE;&#x7B54;&#x3002;&#x5F53;&#x7136;&#x4E86;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8BBE;&#x8BA1;&#x95EE;&#x5377;&#x8BA9;&#x5927;&#x5BB6;&#x586B;&#x5199;&#xFF0C;&#x56DE;&#x7B54;&#x8FD9;&#x4E09;&#x4E2A;&#x95EE;&#x9898;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x4F60;&#x6CA1;&#x6CD5;&#x4FDD;&#x8BC1;&#x7B54;&#x5377;&#x4EBA;&#x662F;&#x5982;&#x5B9E;&#x4F5C;&#x7B54;&#x7684;&#xFF1A;</p>
+<ul>
+<li>&#x53EF;&#x80FD;&#x662F;&#x56E0;&#x4E3A;&#x81EA;&#x5DF1;&#x4E0D;&#x60F3;&#x505A;&#x996D;&#xFF0C;&#x624D;&#x6C89;&#x8FF7;&#x76F4;&#x63A5;&#x70B9;&#x5FEB;&#x9910;&#x7684;</li>
+<li>&#x6216;&#x662F;&#x7F9E;&#x4E8E;&#x627F;&#x8BA4;&#x70B8;&#x9E21;&#x817F;&#x5B9E;&#x5728;&#x592A;&#x597D;&#x5403;&#x4E86;</li>
+<li>&#x4EA6;&#x6216;&#x662F;&#x6240;&#x6709;&#x7684;&#x9009;&#x9879;&#x90FD;&#x4E0D;&#x6070;&#x5F53;</li>
+<li>&#x751A;&#x81F3;&#x4ED6;&#x4EEC;&#x4E5F;&#x4E0D;&#x77E5;&#x9053;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x5403;&#x5FEB;&#x9910;
+<img src="../media/15902412928083.jpg" alt=""></li>
+</ul>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x66F4;&#x597D;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x662F;&#x6211;&#x4EEC;&#x8BBE;&#x8BA1;&#x4E00;&#x4E9B;&#x201C;&#x4EE3;&#x7406;&#x53D8;&#x91CF;&#x201D;/&#x201C;&#x76F8;&#x5173;&#x95EE;&#x9898;&#x201D;&#xFF0C;&#x4E0E;&#x6240;&#x6C42;&#x7684;&#x95EE;&#x9898;&#x6709;&#x5173;&#x4F46;&#x5E76;&#x975E;&#x5176;&#x81EA;&#x8EAB;&#x3002; &quot;&#x538B;&#x529B;&quot;&#x672C;&#x8EAB;&#xFF0C;&#x5728;&#x7EDF;&#x8BA1;&#x5B66;&#x7684;&#x89C6;&#x89D2;&#x91CC;&#xFF0C;&#x662F;&#x66F4;&#x865A;&#x4E00;&#x4E9B;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x7ED9;&#x201C;&#x538B;&#x529B;&#x201D;&#x5177;&#x4F53;&#x5316;&#x3002;
+<img src="../media/15902411980646.jpg" alt=""></p>
+<p>&#x201C;&#x5403;&#x5FEB;&#x9910;&#x8DDF;&#x91CA;&#x653E;&#x538B;&#x529B;&#x6709;&#x5173;&#x5417;&#xFF1F;&#x201D;&#xFF0C;&#x4E0D;&#x65B9;&#x4FBF;&#x76F4;&#x63A5;&#x56DE;&#x7B54;&#x3002;&#x800C;&#x201C;&#x5403;&#x5FEB;&#x9910;&#x7684;&#x4EBA;&#x6BCF;&#x5468;&#x5DE5;&#x4F5C;&#x65F6;&#x957F;&#x662F;&#x5426;&#x8D85;&#x8FC7;80&#x5C0F;&#x65F6;&#x201D;&#x8FD9;&#x79CD;&#x95EE;&#x9898;&#x662F;&#x53EF;&#x4EE5;&#x56DE;&#x7B54;&#x7684;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5728;&#x8BBE;&#x8BA1;&#x95EE;&#x5377;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x4E0D;&#x4EC5;&#x8981;&#x77E5;&#x9053;&#x5403;&#x5FEB;&#x9910;&#x7684;&#x4EBA;&#x6570;&#xFF0C;&#x800C;&#x4E14;&#x8FD8;&#x8981;&#x77E5;&#x9053;&#x662F;&#x5728;&#x4E00;&#x5468;&#x7684;&#x54EA;&#x51E0;&#x5929;&#x5403;&#x7684;&#xFF0C;&#x51E0;&#x70B9;&#x5403;&#x7684;&#x3002;&#x4F46;&#x4F60;&#x8981;&#x77E5;&#x9053;&#xFF0C;&#x5373;&#x4F7F;&#x8FD9;&#x6837;&#xFF0C;&#x4F60;&#x5F97;&#x51FA;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x662F; &#x201C;&#x538B;&#x529B;&#x5927;&#x4E0E;&#x5403;&#x5FEB;&#x9910;&#x6709;&#x53EF;&#x80FD;&#x76F8;&#x5173;&#x201D;&#xFF0C;&#x4E0D;&#x662F;&#x56E0;&#x679C;&#xFF0C;&#x4E5F;&#x4E0D;&#x662F;&#x4E00;&#x5B9A;&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#xFF0C;<strong>&#x7EDF;&#x8BA1;&#x5B66;(Statis&#xAD;tics)&#x662F;&#x6536;&#x96C6;&#x3001;&#x5904;&#x7406;&#x3001;&#x5206;&#x6790;&#x3001;&#x89E3;&#x91CA;&#x6570;&#x636E;&#x5E76;&#x4ECE;&#x6570;&#x636E;&#x4E2D;&#x5F97;&#x51FA;&#x7ED3;&#x8BBA;&#x7684;&#x79D1;&#x5B66;&#x3002;</strong> &#x5B83;&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x662F;&#x4E00;&#x5957;&#x6709;&#x5173;&#x6570;&#x636E;&#x6536;&#x96C6;&#x3001;&#x5904;&#x7406;&#x3001;&#x5206;&#x6790;&#x3001;&#x89E3;&#x91CA;&#x5E76;&#x4ECE;&#x6570;&#x636E;&#x4E2D;&#x5F97;&#x51FA;&#x7ED3;&#x8BBA;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x7EDF;&#x8BA1;&#x7814;&#x7A76;&#x7684;&#x662F;&#x6765;&#x81EA;&#x5404;&#x9886;&#x57DF;&#x7684;&#x6570;&#x636E;&#x3002;&#x6570;&#x636E;&#x6536;&#x96C6;&#x4E5F;&#x5C31;&#x662F;&#x53D6;&#x5F97;&#x7EDF;&#x8BA1;&#x6570;&#x636E;&#xFF1B;&#x6570;&#x636E;&#x5904;&#x7406;&#x662F;&#x5C06;&#x6570;&#x636E;&#x7528;&#x56FE;&#x8868;&#x7B49;&#x5F62;&#x5F0F;&#x5C55;&#x793A;&#x51FA;&#x6765;&#xFF1B;&#x6570;&#x636E;&#x5206;&#x6790;&#x5219;&#x662F;&#x9009;&#x62E9;&#x9002;&#x5F53;&#x7684;&#x7EDF;&#x8BA1;&#x65B9;&#x6CD5;&#x7814;&#x7A76;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x4ECE;&#x6570;&#x636E;&#x4E2D;&#x63D0;&#x53D6;&#x6709;&#x7528;&#x4FE1;&#x606F;&#x8FDB;&#x800C;&#x5F97;&#x51FA;&#x7ED3;&#x8BBA;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x7EDF;&#x8BA1;&#x5B66;&#x5E2E;&#x6211;&#x4EEC;&#x89E3;&#x51B3;&#x4E0D;&#x786E;&#x5B9A;&#x95EE;&#x9898;&#x7684;&#x6839;&#x672C;&#x65B9;&#x6CD5;&#xFF0C;&#x6211;&#x4EEC;&#x603B;&#x7ED3;&#x4E3A;&#x201C;&#x8BFB;&#x61C2;&#x6570;&#x636E;&#x5E76;&#x7528;&#x6570;&#x636E;&#x8BF4;&#x8BDD;&#x201D;&#x3002;</p>
+<h2 id="&#x7528;&#x6570;&#x636E;&#x8BF4;&#x8BDD;&#x5BF9;&#x4E2A;&#x4EBA;&#x751F;&#x6D3B;&#x606F;&#x606F;&#x76F8;&#x5173;">&#x7528;&#x6570;&#x636E;&#x8BF4;&#x8BDD;&#x5BF9;&#x4E2A;&#x4EBA;&#x751F;&#x6D3B;&#x606F;&#x606F;&#x76F8;&#x5173;</h2>
+<p>&#x6709;&#x4E00;&#x4E2A;&#x6709;&#x8DA3;&#x7684;&#x73B0;&#x8C61;&#xFF0C;&#x5728;&#x5168;&#x4E16;&#x754C;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x56FD;&#x5BB6;&#x7684;&#x6559;&#x80B2;&#x4F53;&#x7CFB;&#x4E2D;&#xFF0C;&#x5730;&#x4F4D;&#x6700;&#x9AD8;&#x7684;&#x6C38;&#x8FDC;&#x662F;2&#x95E8;&#x8BFE;&#x7A0B;&#xFF1A;&#x5176;&#x4E00;&#x662F;&#x8BED;&#x8A00;&#xFF0C;&#x5176;&#x4E8C;&#x5FC5;&#x662F;&#x6570;&#x5B66;&#x3002;&#x8BED;&#x8A00;&#x662F;&#x8868;&#x8FBE;&#x7684;&#x5DE5;&#x5177;&#xFF0C;&#x6570;&#x5B57;&#x662F;&#x7CBE;&#x51C6;&#x7684;&#x667A;&#x6167;&#x3002;&#x65E0;&#x8BBA;&#x6587;&#x5316;&#x5DEE;&#x5F02;&#x591A;&#x5927;&#xFF0C;&#x8FD9;&#x4E00;&#x4E2A;&#x5168;&#x7403;&#x5404;&#x56FD;&#x73B0;&#x8C61;&#x90FD;&#x4FDD;&#x6301;&#x7740;&#x60CA;&#x4EBA;&#x7684;&#x7EDF;&#x4E00;&#x3002;&#x5B66;&#x4E60;&#x7528;&#x6570;&#x636E;&#x8BF4;&#x8BDD;&#xFF0C;&#x548C;&#x5B66;&#x4E60;&#x8BED;&#x8A00;&#x8868;&#x8FBE;&#xFF0C;&#x5E94;&#x653E;&#x5728;&#x540C;&#x7B49;&#x91CD;&#x8981;&#x5730;&#x4F4D;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x4EBA;&#x7684;&#x793E;&#x4EA4;&#x751F;&#x5B58;&#x57FA;&#x7840;&#x3002;</p>
+<p>1&#x3001;&#x6211;&#x4EEC;&#x5E73;&#x5E38;&#x770B;&#x8DB3;&#x7403;&#x6BD4;&#x8D5B;&#xFF0C;&#x6709;&#x4EBA;&#x89C9;&#x5F97;&#x5440;&#xFF0C;&#x8FD9;&#x6885;&#x897F;&#x8E22;&#x7684;&#x771F;&#x597D;&#xFF0C;C&#x7F57;&#x8E22;&#x7684;&#x771F;&#x597D;&#x3002;&#x8FD9;&#x79CD;&#x597D;&#xFF0C;&#x662F;&#x76F4;&#x89C2;&#x611F;&#x89C9;&#x51FA;&#x6765;&#x7684;&#x3002;&#x800C;&#x4E13;&#x5BB6;&#x770B;&#x6BD4;&#x8D5B;&#xFF0C;&#x4F1A;&#x770B;&#x660E;&#x661F;&#x7403;&#x5458;&#x7684;&#x6709;&#x6548;&#x8DD1;&#x52A8;&#x8DDD;&#x79BB;&#xFF0C;&#x8D77;&#x5DE6;&#x811A;&#x8FD8;&#x662F;&#x53F3;&#x811A;&#x5C04;&#x95E8;&#x7684;&#x51C6;&#x786E;&#x7387;&#x9AD8;&#xFF0C;&#x8FDB;&#x7403;&#x6570;&#x662F;&#x767E;&#x5206;&#x4E4B;&#x591A;&#x5C11;&#x7B49;&#x7B49;&#x7B49;&#x7B49;&#x3002;&#x770B;&#x6BD4;&#x8D5B;&#x5168;&#x662F;&#x6570;&#x636E;&#x3002;&#x90FD;&#x8BF4;&#x5916;&#x884C;&#x770B;&#x70ED;&#x95F9;&#xFF0C;&#x884C;&#x5BB6;&#x770B;&#x95E8;&#x9053;&#xFF0C;&#x8FD9;&#x4E2A;&#x95E8;&#x9053;&#x5176;&#x5B9E;&#x5F88;&#x5927;&#x90E8;&#x5206;&#x5C31;&#x662F;&#x6570;&#x636E;&#x7684;&#x5206;&#x6790;&#x3002;
+<img src="../media/15902404961968.jpg" alt=""></p>
+<p>2&#x3001;&#x6570;&#x636E;&#x771F;&#x7684;&#x80FD;&#x6307;&#x5BFC;&#x6211;&#x4EEC;&#x201C;&#x8BF4;&#x8BDD;&#x201D;&#x3002;&#x6211;&#x6BCF;&#x5929;&#x90FD;&#x4F1A;&#x53FC;&#x903C;&#x53FC;&#xFF0C;&#x4F46;&#x5176;&#x5B9E;&#x8BED;&#x901F;&#x8FD8;&#x662F;&#x5F88;&#x6162;&#x7684;&#x3002;&#x6211;&#x7EDF;&#x8BA1;&#x4E86;&#x4E00;&#x4E0B;&#xFF0C;&#x6BCF;&#x79D2;&#x949F;&#x4F9D;&#x6211;&#x76EE;&#x524D;&#x7684;&#x8BED;&#x901F;&#x53EA;&#x80FD;&#x8BF4;&#x4E09;&#x4E2A;&#x5B57;&#xFF0C;&#x800C;&#x64AD;&#x97F3;&#x5458;&#x80FD;&#x8BF4;3.6&#x4E2A;&#x5B57;&#xFF0C;&#x800C;&#x636E;&#x5F97;&#x5230;&#x7684;&#x8457;&#x540D;&#x8F6C;&#x8FF0;&#x5E08;&#x6000;&#x6C99;&#x8001;&#x5E08;&#x8BB2;&#xFF0C;&#x4E00;&#x4E2A;&#x4F18;&#x79C0;&#x7684;&#x5185;&#x5BB9;&#x751F;&#x4EA7;&#x8005;&#xFF0C;&#x8BED;&#x901F;&#x8981;&#x63A7;&#x5236;&#x5728;&#x6BCF;&#x79D2;4.3&#x5230;4.5&#x4E2A;&#x5B57;&#x3002;&#x5FEB;&#x4E8E;&#x8FD9;&#x4E2A;&#x901F;&#x5EA6;&#xFF0C;&#x4F1A;&#x8BA9;&#x4EBA;&#x89C9;&#x5F97;&#x5634;&#x662F;&#x501F;&#x522B;&#x4EBA;&#x7684;&#xFF0C;&#x542C;&#x8D77;&#x6765;&#x8BA9;&#x4EBA;&#x5F88;&#x7D2F;&#x3002;<strong> &#x7528;&#x6570;&#x636E;&#x8BF4;&#x8BDD;&#xFF0C;&#x624D;&#x80FD;&#x5207;&#x5B9E;&#x7684;&#x627E;&#x5230;&#x95EE;&#x9898;&#x7684;&#x8981;&#x5BB3;&#x3002; </strong> &#x5B66;&#x4F1A;&#x7ECF;&#x5E38;&#x4F7F;&#x7528;&#x6570;&#x636E;&#xFF0C;&#x5C31;&#x6BD4;&#x7B80;&#x5355;&#x7684;&#x8BF4;&#x51E0;&#x53E5;&#x611F;&#x6027;&#x7684;&#x8BCD;&#x8BED;&#xFF0C;&#x725B;&#x903C;&#x5F97;&#x591A;&#x3002;
+<img src="../media/15902406320206.jpg" alt=""></p>
+<p>3&#x3001;&#x5728;&#x804C;&#x573A;&#x751F;&#x6D3B;&#x4E2D;&#xFF0C;&#x8868;&#x8FBE;&#x6211;&#x4EEC;&#x67D0;&#x4E2A;&#x89C2;&#x70B9;&#x65F6;&#xFF0C;&#x5F88;&#x591A;&#x4EBA;&#x4F1A;&#x82E6;&#x53E3;&#x5A46;&#x5FC3;&#x5730;&#x5206;&#x6790;&#x95EE;&#x9898;&#x7684;&#x5229;&#x5F0A;&#xFF0C;&#x8BA9;&#x542C;&#x4F17;&#x77E5;&#x9053;&#x5DF1;&#x65B9;&#x4E00;&#x4E9B;&#x89C2;&#x70B9;&#x662F;&#x5408;&#x60C5;&#x5408;&#x7406;&#x7684;&#xFF0C;&#x903B;&#x8F91;&#x4E0A;&#x6B63;&#x786E;&#x7684;&#x3002;&#x8FD9;&#x79CD;&#x505A;&#x6CD5;&#x770B;&#x4F3C;&#x975E;&#x5E38;&#x52AA;&#x529B;&#x548C;&#x7528;&#x5FC3;&#xFF0C;&#x4F46;&#x662F;&#x5374;&#x6536;&#x6548;&#x751A;&#x5FAE;&#xFF0C;&#x56E0;&#x4E3A;&#x542C;&#x4F17;&#x53EA;&#x542C;&#x5230;&#x4E86;&#x9053;&#x7406;&#xFF0C;&#x9053;&#x7406;&#x8C01;&#x90FD;&#x61C2;&#xFF0C;&#x5728;&#x6CA1;&#x6709;&#x770B;&#x5230;&#x4E8B;&#x5B9E;&#x4E4B;&#x524D;&#xFF0C;&#x4EBA;&#x4EEC;&#x90FD;&#x662F;&#x62B1;&#x7740;&#x4E00;&#x79CD;&#x534A;&#x4FE1;&#x534A;&#x7591;&#x7684;&#x6001;&#x5EA6;&#x53BB;&#x770B;&#x5F85;&#x95EE;&#x9898;&#x7684;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x5728;&#x542C;&#x4E00;&#x4E2A;&#x672C;&#x5C31;&#x6000;&#x7591;&#x7684;&#x89C2;&#x70B9;&#x65F6;&#xFF0C;&#x66F4;&#x4F1A;&#x52A0;&#x500D;&#x6CE8;&#x610F;&#x3002;&#x9053;&#x7406;&#x8C01;&#x90FD;&#x61C2;&#xFF0C;&#x53EF;&#x7528;&#x4E8B;&#x5B9E;&#x548C;&#x6570;&#x636E;&#x8BF4;&#x8BDD;&#x4F1A;&#x66F4;&#x6709;&#x6548;&#x3002;
+<img src="../media/15902387220823.jpg" alt=""></p>
+<h2 id="&#x5728;&#x5F53;&#x4ECA;&#x65F6;&#x4EE3;&#xFF0C;&#x7528;&#x6570;&#x5B57;&#x8BF4;&#x8BDD;&#x66F4;&#x662F;&#x5FC5;&#x5907;&#x7684;&#x6280;&#x80FD;">&#x5728;&#x5F53;&#x4ECA;&#x65F6;&#x4EE3;&#xFF0C;&#x7528;&#x6570;&#x5B57;&#x8BF4;&#x8BDD;&#x66F4;&#x662F;&#x5FC5;&#x5907;&#x7684;&#x6280;&#x80FD;</h2>
+<p>&#x6709;&#x4E00;&#x4E2A;&#x6709;&#x8DA3;&#x7684;&#x5DE7;&#x5408;&#xFF0C;&#x5927;&#x90E8;&#x5206;&#x73B0;&#x4EE3;&#x79D1;&#x5B66;&#x8D70;&#x5411;&#x6210;&#x719F;&#x7684;&#x8FDB;&#x6B65;&#x5386;&#x7A0B;&#xFF08;&#x65E0;&#x8BBA;&#x662F;&#x5982;&#x4ECA;&#x5546;&#x754C;&#x7099;&#x624B;&#x53EF;&#x70ED;&#x7684;&#x751F;&#x7269;&#x5B66;&#xFF0C;&#x8FD8;&#x662F;HR&#x7ECF;&#x5E38;&#x6253;&#x4EA4;&#x9053;&#x7684;&#x884C;&#x4E3A;&#x5FC3;&#x7406;&#x5B66;&#xFF09;&#xFF0C;&#x90FD;&#x7ECF;&#x5386;&#x8FC7;&#x4ECE;&#x65E9;&#x671F;&#x5355;&#x7EAF;&#x7684;&#x5B9A;&#x6027;&#x5206;&#x6790;&#xFF0C;&#x8D70;&#x5411;&#x4F9D;&#x9760;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x7CBE;&#x51C6;&#x5B9A;&#x91CF;&#x5206;&#x6790;&#x7684;&#x5386;&#x7A0B;&#x3002;&#x6570;&#x636E;&#x5728;&#x9AD8;&#x901F;&#x524D;&#x884C;&#x7684;&#x4ECA;&#x5929;&#xFF0C;&#x53D8;&#x5F97;&#x8D8A;&#x6765;&#x8D8A;&#x91CD;&#x8981;&#x3002;</p>
+<p>&#x5927;&#x7EA6;50&#x591A;&#x5E74;&#x524D;&#xFF0C;PDCA&#x5FAA;&#x73AF;(&#x8BA1;&#x5212;Plan/&#x6267;&#x884C;Do/&#x68C0;&#x67E5;Check/&#x5904;&#x7406;Act)&#x53D1;&#x8D77;&#x4EBA;&#xFF0C;&#x7BA1;&#x7406;&#x5927;&#x5E08;&#x7231;&#x5FB7;&#x534E;&#x5179;&#xB7;&#x6234;&#x660E;&#x8BF4;&#xFF1A;&#x201C;&#x9664;&#x4E86;&#x4E0A;&#x5E1D;&#xFF0C;&#x4EFB;&#x4F55;&#x4EBA;&#x90FD;&#x5FC5;&#x987B;&#x7528;&#x6570;&#x636E;&#x8BF4;&#x8BDD;&#x3002;&#x201D;&#x5F53;&#x65F6;&#x4EBA;&#x4EEC;&#x4ECD;&#x5904;&#x5728;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x532E;&#x4E4F;&#x7684;&#x65F6;&#x4EE3;&#xFF0C;&#x800C;&#x4ECA;&#x5929;&#x5219;&#x5B8C;&#x5168;&#x4E0D;&#x540C;&#x3002;&#x968F;&#x7740;&#x6211;&#x4EEC;&#x8FC8;&#x5165;&#x6570;&#x5B57;&#x65F6;&#x4EE3;&#xFF0C;&#x6570;&#x636E;&#x4ECE;&#x4E00;&#x79CD;&#x9644;&#x5C5E;&#x54C1;&#xFF0C;&#x53D8;&#x6210;&#x4F01;&#x4E1A;&#x521B;&#x9020;&#x4EF7;&#x503C;&#x7684;&#x5173;&#x952E;&#x8D44;&#x6E90;&#x3002;&#x6211;&#x4EEC;&#x6BCF;&#x4E2A;&#x4EBA;&#x7684;&#x8EAB;&#x4E0A;&#x90FD;&#x85CF;&#x6709;&#x65E0;&#x6570;&#x7684;&#x6570;&#x636E;&#x6807;&#x7B7E;&#xFF0C;&#x523B;&#x753B;&#x7740;&#x6211;&#x4EEC;&#x6BCF;&#x4E2A;&#x4EBA;&#x7684;&#x753B;&#x50CF;&#x3002;&#x56E0;&#x800C;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x5728;&#x201C;&#x53CC;&#x5341;&#x4E00;&#x201D;&#x6253;&#x5F00;&#x4EAC;&#x4E1C;&#x3001;&#x6DD8;&#x5B9D;&#x3001;&#x4E9A;&#x9A6C;&#x900A;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6570;&#x636E;&#x77E5;&#x9053;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x4EC0;&#x4E48;&#x3002;
+<img src="../media/15902295230896.jpg" alt=""></p>
+<p>&#x4ECE;&#x4F01;&#x4E1A;&#x89D2;&#x5EA6;&#x770B;&#xFF0C;&#x6D77;&#x91CF;&#x7684;&#x7528;&#x6237;&#x6570;&#x636E;&#x6B63;&#x5728;&#x544A;&#x8BC9;&#x4F01;&#x4E1A;&#xFF0C;&#x5BA2;&#x6237;&#x60F3;&#x8981;&#x4EC0;&#x4E48;&#xFF0C;&#x5E02;&#x573A;&#x6700;&#x6709;&#x53EF;&#x80FD;&#x8D70;&#x5411;&#x54EA;&#x91CC;&#xFF0C;&#x4ECE;&#x800C;&#x8BA9;&#x4F01;&#x4E1A;&#x505A;&#x51FA;&#x66F4;&#x9AD8;&#x8D28;&#x91CF;&#x7684;&#x51B3;&#x7B56;&#x3002;&#x7528;&#x6570;&#x636E;&#x5F62;&#x6210;&#x667A;&#x80FD;&#x7B97;&#x6CD5;&#xFF0C;&#x7528;&#x66F4;&#x591A;&#x7684;&#x6570;&#x636E;&#x6253;&#x78E8;&#x7B97;&#x6CD5;&#x7684;&#x7CBE;&#x51C6;&#x5EA6;&#xFF0C;&#x518D;&#x7528;&#x6570;&#x636E;&#x548C;&#x6570;&#x636E;&#x6253;&#x78E8;&#x51FA;&#x7684;&#x7B97;&#x6CD5;&#x4EE3;&#x66FF;&#x4EBA;&#x7684;&#x4E3B;&#x89C2;&#x9884;&#x6D4B;&#xFF0C;&#x8FD9;&#x5F88;&#x53EF;&#x80FD;&#x4F1A;&#x662F;&#x672A;&#x6765;&#x5546;&#x4E1A;&#x51B3;&#x7B56;&#x7684;&#x8D70;&#x5411;&#x3002;&#x65E2;&#x7136;&#x57FA;&#x4E8E;&#x6570;&#x636E;&#x6784;&#x5EFA;&#x51FA;&#x6765;&#x7684;&#x7B97;&#x6CD5;&#x53EF;&#x4EE5;&#x5728;&#x8C61;&#x5F81;&#x4EBA;&#x7C7B;&#x667A;&#x6167;&#x5DC5;&#x5CF0;&#x7684;&#x56F4;&#x68CB;&#x6BD4;&#x8D5B;&#x4E2D;&#x6218;&#x80DC;&#x4EBA;&#x7C7B;&#x4E16;&#x754C;&#x51A0;&#x519B;&#xFF0C;&#x6211;&#x4EEC;&#x6709;&#x7406;&#x7531;&#x4FE1;&#x4EFB;&#x7B97;&#x6CD5;&#x6240;&#x505A;&#x7684;&#x5546;&#x4E1A;&#x51B3;&#x7B56;&#x548C;&#x9884;&#x6D4B;&#x53EF;&#x4EE5;&#x6BD4;&#x4EBA;&#x7C7B;&#x6709;&#x66F4;&#x597D;&#x7684;&#x8D28;&#x91CF;&#x3002;
+<img src="../media/15902388505298.jpg" alt=""></p>
+<p>&#x968F;&#x7740;&#x5404;&#x5BB6;&#x4F01;&#x4E1A;&#x7684;&#x5404;&#x4E2A;&#x90E8;&#x95E8;&#x8BF8;&#x591A;&#x6570;&#x636E;&#x7CFB;&#x7EDF;&#x7684;&#x4E0A;&#x7EBF;&#xFF0C;&#x4E0D;&#x4E45;&#x4EE5;&#x540E;&#x6211;&#x4EEC;&#x5C31;&#x5C06;&#x770B;&#x89C1;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x7CFB;&#x7EDF;&#x5F7C;&#x6B64;&#x94FE;&#x63A5;&#x3001;&#x6253;&#x901A;&#x5F62;&#x6210;&#x95ED;&#x73AF;&#xFF0C;&#x5E76;&#x4E14;&#x6309;&#x7167;&#x4F7F;&#x7528;&#x573A;&#x666F;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x573A;&#x666F;&#x4E00;&#x4E2A;&#x95ED;&#x73AF;&#x3002;&#x6709;&#x4E86;&#x6570;&#x636E;&#x4EF7;&#x503C;&#x7684;&#x52A0;&#x6210;&#xFF0C;&#x6211;&#x4EEC;&#x770B;&#x5230;&#x5F88;&#x591A;&#x65B0;&#x4E8B;&#x7269;&#x5728;&#x8FD9;&#x4E2A;&#x5145;&#x6EE1;&#x60F3;&#x8C61;&#x529B;&#x548C;&#x53EF;&#x80FD;&#x6027;&#x7684;&#x65F6;&#x4EE3;&#x840C;&#x751F;&#x3002;&#x4EBA;&#x7C7B;&#x7684;&#x51B3;&#x7B56;&#x8D8A;&#x6765;&#x8D8A;&#x4F9D;&#x8D56;&#x6570;&#x636E;&#xFF0C;&#x4E5F;&#x5C06;&#x662F;&#x4E00;&#x79CD;&#x5FC5;&#x7136;&#x8D8B;&#x52BF;&#x3002;
+<img src="../media/15902295113682.jpg" alt=""></p>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x5F53;&#x4ECA;&#x65F6;&#x4EE3;&#xFF0C;&#x7528;&#x6570;&#x636E;&#x8BF4;&#x8BDD;&#xFF0C;&#x662F;&#x5BF9;&#x51B3;&#x7B56;&#x7684;&#x57FA;&#x672C;&#x5C0A;&#x91CD;&#x3002;&#x6211;&#x4EEC;&#x5EFA;&#x8BAE;&#x5728;&#x505A;&#x6240;&#x6709;&#x91CD;&#x8981;&#x51B3;&#x7B56;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8BF7;&#x9002;&#x5F53;&#x629B;&#x5F03;&#x81EA;&#x5DF1;&#x5FC3;&#x4E2D;&#x7684;&#x56FA;&#x6709;&#x4E3B;&#x89C2;&#x504F;&#x89C1;&#xFF0C;&#x7528;&#x6570;&#x636E;&#x903B;&#x8F91;&#x548C;&#x5206;&#x6790;&#x4F53;&#x7CFB;&#x8BF4;&#x8BDD;&#x3002;</p>
+<p>&#x53C2;&#x8003;&#x6587;&#x732E;:
+[1]4042677.&#x4E71;&#x8C08;&#x7BA1;&#x7406;&#xFF08;&#x9664;&#x4E86;&#x4E0A;&#x5E1D;&#xFF0C;&#x4EFB;&#x4F55;&#x4EBA;&#x90FD;&#x5FC5;&#x987B;&#x7528;&#x6570;&#x636E;&#x8BF4;&#x8BDD;&#xFF09;.360&#x56FE;&#x4E66;&#x9986;.2018
+[2]&#x7FFC;&#x57CE;&#x5FAE;&#x89C6;.&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;&#x6570;&#x636E;&#x8BF4;&#x8BDD;.&#x641C;&#x72D0;&#x7F51;.2018
+[3]&#x8D3E;&#x4FCA;&#x5E73;,&#x548C;&#x6653;&#x7FA4;,&#x91D1;&#x52C7;&#x8FDB;.&#x300A;&#x7EDF;&#x8BA1;&#x5B66;&#x300B;(&#x7B2C;&#x4E03;&#x7248;).&#x4E2D;&#x56FD;&#x4EBA;&#x6C11;&#x5927;&#x5B66;&#x51FA;&#x7248;&#x793E;&#xFF0C;2018</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="0P2统计学发展简史.html" class="navigation navigation-prev " aria-label="Previous page: 统计学发展简史">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="0P4数字与数学思维1.html" class="navigation navigation-next " aria-label="Next page: 数字与数据思维1">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"一切用数据说话","level":"1.2.3","depth":2,"next":{"title":"数字与数据思维1","level":"1.2.4","depth":2,"path":"post/0P4数字与数学思维1.md","ref":"post/0P4数字与数学思维1.md","articles":[]},"previous":{"title":"统计学发展简史","level":"1.2.2","depth":2,"path":"post/0P2统计学发展简史.md","ref":"post/0P2统计学发展简史.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","katex@^1.1.3","flowchart@^1.1.0"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"flowchart":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Qiaoshengchuan","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"应用统计学与R语言实现学习笔记","language":"zh-hans","gitbook":"3.2.3"},"file":{"path":"post/0P3一切用数据说话.md","mtime":"2020-05-29T14:54:49.115Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-02T16:56:51.680Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
