@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>一切用数据说话 · 应用统计学与R语言实现学习笔记</title>
+        <title>一切用数据说话 · 从浅入深统计学</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -191,12 +191,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="1统计学概论.html">
+        <li class="chapter " data-level="1.3" data-path="1统计学简介.html">
             
-                <a href="1统计学概论.html">
+                <a href="1统计学简介.html">
             
                     
-                    统计学概论
+                    统计学简介
             
                 </a>
             
@@ -205,9 +205,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="1P统计学及其研究领域.md">
+        <li class="chapter " data-level="1.3.1" data-path="1P1统计学及其分类.html">
             
-                <span>
+                <a href="1P1统计学及其分类.html">
             
                     
                     统计学及其研究领域
@@ -218,9 +218,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="1P总体与样本、参数与统计量.html">
+        <li class="chapter " data-level="1.3.2" data-path="1P统计学的四个基本概念.md">
             
-                <a href="1P总体与样本、参数与统计量.html">
+                <span>
             
                     
                     总体与样本、参数与统计量
@@ -231,7 +231,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="1P描述统计与推断统计.md">
+        <li class="chapter " data-level="1.3.3" data-path="1P数据与数据的分类.md">
             
                 <span>
             
@@ -318,7 +318,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x7EDF;&#x8BA1;&#x5B66;&#x7684;&#x6838;&#x5FC3;&#x601D;&#x60F3;&#xFF1A;&#x4E00;&#x5207;&#x7528;&#x6570;&#x636E;&#x8BF4;&#x8BDD;">&#x7EDF;&#x8BA1;&#x5B66;&#x7684;&#x6838;&#x5FC3;&#x601D;&#x60F3;&#xFF1A;&#x4E00;&#x5207;&#x7528;&#x6570;&#x636E;&#x8BF4;&#x8BDD;</h1>
-<p>&#x5927;&#x5BB6;&#x597D;&#xFF0C;&#x6211;&#x662F;&#x8001;&#x4E54;&#xFF0C;&#x8FD9;&#x91CC;&#x662F;&#x8D85;&#x667A;&#x661F;&#x7403;&#x7684;&#x300A;&#x8D85;&#x667A;&#xB7;&#x7EDF;&#x8BA1;&#x5B66;&#x300B;&#x7CFB;&#x5217;&#x8BFE;&#x7A0B;&#x3002;</p>
+<p>&#x5927;&#x5BB6;&#x597D;&#xFF0C;&#x6211;&#x662F;&#x8001;&#x4E54;&#xFF0C;&#x8FD9;&#x91CC;&#x662F;&#x8D85;&#x667A;&#x5B66;&#x5802;&#x7684;&#x300A;&#x8D85;&#x667A;&#xB7;&#x7EDF;&#x8BA1;&#x5B66;&#x300B;&#x7CFB;&#x5217;&#x8BFE;&#x7A0B;&#x3002;</p>
 <p>&#x5728;&#x524D;&#x6587;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x63CF;&#x7ED8;&#x4E86;&#x7EDF;&#x8BA1;&#x5B66;&#x662F;&#x4E00;&#x95E8;&#x5173;&#x4E8E;&#x6570;&#x636E;&#x7684;&#x5B66;&#x95EE;&#xFF0C;&#x5176;&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x7814;&#x7A76;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#x3002;</p>
 <p>&#x63A5;&#x4E0B;&#x6765;&#x5462;&#xFF0C;&#x5728;&#x672C;&#x6587;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4E86;&#x89E3;&#x7EDF;&#x8BA1;&#x5B66;&#x7684;&#x6838;&#x5FC3;&#x7406;&#x5FF5;&#xFF0C;&#x4EE5;&#x53CA;&#x6211;&#x6BCF;&#x5468;&#x672B;&#x90FD;&#x4F1A;&#x70B9;&#x7684;&#x80A5;&#x5B85;&#x5FEB;&#x4E50;&#x5957;&#x9910;&#x3002;</p>
 <h2 id="&#x5148;&#x4ECE;&#x80A5;&#x5B85;&#x5FEB;&#x4E50;&#x5957;&#x9910;&#x8BF4;&#x8D77;">&#x5148;&#x4ECE;&#x80A5;&#x5B85;&#x5FEB;&#x4E50;&#x5957;&#x9910;&#x8BF4;&#x8D77;</h2>
@@ -363,10 +363,12 @@
 <p>&#x968F;&#x7740;&#x5404;&#x5BB6;&#x4F01;&#x4E1A;&#x7684;&#x5404;&#x4E2A;&#x90E8;&#x95E8;&#x8BF8;&#x591A;&#x6570;&#x636E;&#x7CFB;&#x7EDF;&#x7684;&#x4E0A;&#x7EBF;&#xFF0C;&#x4E0D;&#x4E45;&#x4EE5;&#x540E;&#x6211;&#x4EEC;&#x5C31;&#x5C06;&#x770B;&#x89C1;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x7CFB;&#x7EDF;&#x5F7C;&#x6B64;&#x94FE;&#x63A5;&#x3001;&#x6253;&#x901A;&#x5F62;&#x6210;&#x95ED;&#x73AF;&#xFF0C;&#x5E76;&#x4E14;&#x6309;&#x7167;&#x4F7F;&#x7528;&#x573A;&#x666F;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x573A;&#x666F;&#x4E00;&#x4E2A;&#x95ED;&#x73AF;&#x3002;&#x6709;&#x4E86;&#x6570;&#x636E;&#x4EF7;&#x503C;&#x7684;&#x52A0;&#x6210;&#xFF0C;&#x6211;&#x4EEC;&#x770B;&#x5230;&#x5F88;&#x591A;&#x65B0;&#x4E8B;&#x7269;&#x5728;&#x8FD9;&#x4E2A;&#x5145;&#x6EE1;&#x60F3;&#x8C61;&#x529B;&#x548C;&#x53EF;&#x80FD;&#x6027;&#x7684;&#x65F6;&#x4EE3;&#x840C;&#x751F;&#x3002;&#x4EBA;&#x7C7B;&#x7684;&#x51B3;&#x7B56;&#x8D8A;&#x6765;&#x8D8A;&#x4F9D;&#x8D56;&#x6570;&#x636E;&#xFF0C;&#x4E5F;&#x5C06;&#x662F;&#x4E00;&#x79CD;&#x5FC5;&#x7136;&#x8D8B;&#x52BF;&#x3002;
 <img src="../media/15902295113682.jpg" alt=""></p>
 <p>&#x6240;&#x4EE5;&#xFF0C;&#x5F53;&#x4ECA;&#x65F6;&#x4EE3;&#xFF0C;&#x7528;&#x6570;&#x636E;&#x8BF4;&#x8BDD;&#xFF0C;&#x662F;&#x5BF9;&#x51B3;&#x7B56;&#x7684;&#x57FA;&#x672C;&#x5C0A;&#x91CD;&#x3002;&#x6211;&#x4EEC;&#x5EFA;&#x8BAE;&#x5728;&#x505A;&#x6240;&#x6709;&#x91CD;&#x8981;&#x51B3;&#x7B56;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8BF7;&#x9002;&#x5F53;&#x629B;&#x5F03;&#x81EA;&#x5DF1;&#x5FC3;&#x4E2D;&#x7684;&#x56FA;&#x6709;&#x4E3B;&#x89C2;&#x504F;&#x89C1;&#xFF0C;&#x7528;&#x6570;&#x636E;&#x903B;&#x8F91;&#x548C;&#x5206;&#x6790;&#x4F53;&#x7CFB;&#x8BF4;&#x8BDD;&#x3002;</p>
-<p>&#x53C2;&#x8003;&#x6587;&#x732E;:
-[1]4042677.&#x4E71;&#x8C08;&#x7BA1;&#x7406;&#xFF08;&#x9664;&#x4E86;&#x4E0A;&#x5E1D;&#xFF0C;&#x4EFB;&#x4F55;&#x4EBA;&#x90FD;&#x5FC5;&#x987B;&#x7528;&#x6570;&#x636E;&#x8BF4;&#x8BDD;&#xFF09;.360&#x56FE;&#x4E66;&#x9986;.2018
-[2]&#x7FFC;&#x57CE;&#x5FAE;&#x89C6;.&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;&#x6570;&#x636E;&#x8BF4;&#x8BDD;.&#x641C;&#x72D0;&#x7F51;.2018
-[3]&#x8D3E;&#x4FCA;&#x5E73;,&#x548C;&#x6653;&#x7FA4;,&#x91D1;&#x52C7;&#x8FDB;.&#x300A;&#x7EDF;&#x8BA1;&#x5B66;&#x300B;(&#x7B2C;&#x4E03;&#x7248;).&#x4E2D;&#x56FD;&#x4EBA;&#x6C11;&#x5927;&#x5B66;&#x51FA;&#x7248;&#x793E;&#xFF0C;2018</p>
+<p>&#x53C2;&#x8003;&#x6587;&#x732E;:</p>
+<ol>
+<li>4042677.&#x4E71;&#x8C08;&#x7BA1;&#x7406;&#xFF08;&#x9664;&#x4E86;&#x4E0A;&#x5E1D;&#xFF0C;&#x4EFB;&#x4F55;&#x4EBA;&#x90FD;&#x5FC5;&#x987B;&#x7528;&#x6570;&#x636E;&#x8BF4;&#x8BDD;&#xFF09;.360&#x56FE;&#x4E66;&#x9986;.2018  </li>
+<li>&#x7FFC;&#x57CE;&#x5FAE;&#x89C6;.&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;&#x6570;&#x636E;&#x8BF4;&#x8BDD;.&#x641C;&#x72D0;&#x7F51;.2018  </li>
+<li>&#x8D3E;&#x4FCA;&#x5E73;,&#x548C;&#x6653;&#x7FA4;,&#x91D1;&#x52C7;&#x8FDB;.&#x300A;&#x7EDF;&#x8BA1;&#x5B66;&#x300B;(&#x7B2C;&#x4E03;&#x7248;).&#x4E2D;&#x56FD;&#x4EBA;&#x6C11;&#x5927;&#x5B66;&#x51FA;&#x7248;&#x793E;&#xFF0C;2018  </li>
+</ol>
 
                                 
                                 </section>
@@ -394,7 +396,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"一切用数据说话","level":"1.2.3","depth":2,"next":{"title":"数字与数据思维1","level":"1.2.4","depth":2,"path":"post/0P4数字与数学思维1.md","ref":"post/0P4数字与数学思维1.md","articles":[]},"previous":{"title":"统计学发展简史","level":"1.2.2","depth":2,"path":"post/0P2统计学发展简史.md","ref":"post/0P2统计学发展简史.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","katex@^1.1.3","flowchart@^1.1.0"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"flowchart":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Qiaoshengchuan","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"应用统计学与R语言实现学习笔记","language":"zh-hans","gitbook":"3.2.3"},"file":{"path":"post/0P3一切用数据说话.md","mtime":"2020-05-29T14:54:49.115Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-02T16:56:51.680Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"一切用数据说话","level":"1.2.3","depth":2,"next":{"title":"数字与数据思维1","level":"1.2.4","depth":2,"path":"post/0P4数字与数学思维1.md","ref":"post/0P4数字与数学思维1.md","articles":[]},"previous":{"title":"统计学发展简史","level":"1.2.2","depth":2,"path":"post/0P2统计学发展简史.md","ref":"post/0P2统计学发展简史.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","katex@^1.1.3","flowchart@^1.1.0"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"flowchart":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Qiaoshengchuan","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"从浅入深统计学","language":"zh-hans","gitbook":"3.2.3"},"file":{"path":"post/0P3一切用数据说话.md","mtime":"2020-06-05T13:45:29.049Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-05T13:47:08.549Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
