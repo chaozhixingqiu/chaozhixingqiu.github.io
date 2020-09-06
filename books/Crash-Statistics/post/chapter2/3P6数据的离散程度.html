@@ -1,0 +1,857 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数据的离散程度 · 从浅入深统计学</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Qiaoshengchuan">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3P7数据的分布形态.html" />
+    
+    
+    <link rel="prev" href="3P5数据的集中位置.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    关于本教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../chapter1/1P1统计学研究不确定性.html">
+            
+                <a href="../chapter1/1P1统计学研究不确定性.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    统计学简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../chapter1/1P1统计学研究不确定性.html">
+            
+                <a href="../chapter1/1P1统计学研究不确定性.html">
+            
+                    
+                        <b>2.1.1.</b>
+                    
+                    统计学研究不确定性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../chapter1/1P2统计学发展简史.html">
+            
+                <a href="../chapter1/1P2统计学发展简史.html">
+            
+                    
+                        <b>2.1.2.</b>
+                    
+                    统计学发展简史
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../chapter1/1P3一切用数据说话.html">
+            
+                <a href="../chapter1/1P3一切用数据说话.html">
+            
+                    
+                        <b>2.1.3.</b>
+                    
+                    一切用数据说话
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.3.1" data-path="../chapter1/1P3-1数字与数学思维1.html">
+            
+                <a href="../chapter1/1P3-1数字与数学思维1.html">
+            
+                    
+                        <b>2.1.3.1.</b>
+                    
+                    数字与数据思维1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3.2" data-path="../chapter1/1P3-2数字与数学思维2.html">
+            
+                <a href="../chapter1/1P3-2数字与数学思维2.html">
+            
+                    
+                        <b>2.1.3.2.</b>
+                    
+                    数字与数学思维2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3.3" data-path="../chapter1/1P3-3数字与数学思维3.html">
+            
+                <a href="../chapter1/1P3-3数字与数学思维3.html">
+            
+                    
+                        <b>2.1.3.3.</b>
+                    
+                    数字与数学思维3
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../chapter1/1P4统计学及其分类.html">
+            
+                <a href="../chapter1/1P4统计学及其分类.html">
+            
+                    
+                        <b>2.1.4.</b>
+                    
+                    统计学及其分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="3P1统计数据的分类方法.html">
+            
+                <a href="3P1统计数据的分类方法.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    描述统计学
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="3P1统计数据的分类方法.html">
+            
+                <a href="3P1统计数据的分类方法.html">
+            
+                    
+                        <b>3.1.1.</b>
+                    
+                    统计数据的分类方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="3P2分类型数据的整理与可视化.html">
+            
+                <a href="3P2分类型数据的整理与可视化.html">
+            
+                    
+                        <b>3.1.2.</b>
+                    
+                    分类型数据的整理与可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="3P3数值型数据的整理.html">
+            
+                <a href="3P3数值型数据的整理.html">
+            
+                    
+                        <b>3.1.3.</b>
+                    
+                    数值型数据的整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="3P4数值型数据的可视化.html">
+            
+                <a href="3P4数值型数据的可视化.html">
+            
+                    
+                        <b>3.1.4.</b>
+                    
+                    数值型数据的可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="3P5数据的集中位置.html">
+            
+                <a href="3P5数据的集中位置.html">
+            
+                    
+                        <b>3.1.5.</b>
+                    
+                    数据的集中位置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.1.6" data-path="3P6数据的离散程度.html">
+            
+                <a href="3P6数据的离散程度.html">
+            
+                    
+                        <b>3.1.6.</b>
+                    
+                    数据的离散程度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7" data-path="3P7数据的分布形态.html">
+            
+                <a href="3P7数据的分布形态.html">
+            
+                    
+                        <b>3.1.7.</b>
+                    
+                    数据的分布形态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.8" data-path="3P8多组样本的对比.html">
+            
+                <a href="3P8多组样本的对比.html">
+            
+                    
+                        <b>3.1.8.</b>
+                    
+                    多组样本的对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../chapter3/3P1总体与样本.html">
+            
+                <a href="../chapter3/3P1总体与样本.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    推理统计学
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../chapter3/3P1总体与样本.html">
+            
+                <a href="../chapter3/3P1总体与样本.html">
+            
+                    
+                        <b>4.1.1.</b>
+                    
+                    总体与样本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../chapter3/3P2抽样方法与抽样分布.md">
+            
+                <span>
+            
+                    
+                        <b>4.1.2.</b>
+                    
+                    抽样方法与抽样分布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../chapter3/3P3参数估计.md">
+            
+                <span>
+            
+                    
+                        <b>4.1.3.</b>
+                    
+                    参数估计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../chapter3/3P4假设检验.md">
+            
+                <span>
+            
+                    
+                        <b>4.1.4.</b>
+                    
+                    假设检验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../chapter3/3P5拟合优度.md">
+            
+                <span>
+            
+                    
+                        <b>4.1.5.</b>
+                    
+                    拟合优度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../chapter3/3P6方差分析.md">
+            
+                <span>
+            
+                    
+                        <b>4.1.6.</b>
+                    
+                    方差分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../chapter3/3P7线性回归.md">
+            
+                <span>
+            
+                    
+                        <b>4.1.7.</b>
+                    
+                    线性回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="../chapter3/3P8聚类分析.md">
+            
+                <span>
+            
+                    
+                        <b>4.1.8.</b>
+                    
+                    聚类分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="../chapter3/3P9判别分析.md">
+            
+                <span>
+            
+                    
+                        <b>4.1.9.</b>
+                    
+                    判别分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" data-path="../chapter3/3P10主成分分析.md">
+            
+                <span>
+            
+                    
+                        <b>4.1.10.</b>
+                    
+                    主成分分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.11" data-path="../chapter3/3P11因子分析.md">
+            
+                <span>
+            
+                    
+                        <b>4.1.11.</b>
+                    
+                    因子分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../chapter4/4统计学实战.md">
+            
+                <span>
+            
+                    
+                        <b>5.1.</b>
+                    
+                    统计学实战
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../chapter4/4P1数据收集.md">
+            
+                <span>
+            
+                    
+                        <b>5.1.1.</b>
+                    
+                    数据收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../chapter4/4P1案例与实践.md">
+            
+                <span>
+            
+                    
+                        <b>5.1.2.</b>
+                    
+                    案例与实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../chapter5/4统计学与大数据、机器学习.md">
+            
+                <span>
+            
+                    
+                        <b>6.1.</b>
+                    
+                    统计学与大数据、机器学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../chapter5/统计学与大数据.md">
+            
+                <span>
+            
+                    
+                        <b>6.1.1.</b>
+                    
+                    统计学与大数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="../chapter5/统计学与大数据.md">
+            
+                <span>
+            
+                    
+                        <b>6.1.2.</b>
+                    
+                    统计学与机器学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >数据的离散程度</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x79BB;&#x6563;&#x7A0B;&#x5EA6;&#x7684;&#x5EA6;&#x91CF;&#xFF1A;&#x5F02;&#x4F17;&#x6BD4;&#x7387;&#x3001;&#x56DB;&#x5206;&#x4F4D;&#x5DEE;&#x548C;&#x6807;&#x51C6;&#x5DEE;">&#x79BB;&#x6563;&#x7A0B;&#x5EA6;&#x7684;&#x5EA6;&#x91CF;&#xFF1A;&#x5F02;&#x4F17;&#x6BD4;&#x7387;&#x3001;&#x56DB;&#x5206;&#x4F4D;&#x5DEE;&#x548C;&#x6807;&#x51C6;&#x5DEE;</h1>
+<p>&#x4E0A;&#x4E00;&#x671F;&#x6587;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x8BB2;&#x4E86;&#x53EF;&#x4EE5;&#x4EE3;&#x8868;&#x96C6;&#x4E2D;&#x6570;&#x503C;&#x7684;&#xFF0C;&#x6709;&#x4E09;&#x4E2A;&#x6570;&#xFF1A;&#x4F17;&#x6570;&#x3001;&#x4E2D;&#x6570;&#x3001;&#x5E73;&#x5747;&#x6570;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x7684;&#x8001;&#x677F;&#x8BA9;&#x4F60;&#x6C47;&#x62A5;&#x4E0A;&#x4E2A;&#x5B63;&#x5EA6;&#x7684;&#x9500;&#x91CF;&#x8868;&#x73B0;&#xFF0C;&#x800C;&#x4ED6;&#x8D76;&#x7740;&#x5F00;&#x4E00;&#x4E2A;&#x4F1A;&#xFF0C;&#x8BA9;&#x4F60;&#x53EA;&#x7528;&#x4E00;&#x4E2A;&#x6307;&#x6807;&#x6765;&#x6982;&#x62EC;&#x3002;&#x90A3;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4F17;&#x6570;&#x3001;&#x4E2D;&#x6570;&#x3001;&#x5E73;&#x5747;&#x6570;&#xFF0C;&#x53CD;&#x6620;&#x4E0A;&#x4E2A;&#x5B63;&#x5EA6;&#x7684;&#x9500;&#x91CF;&#x7684;&#x96C6;&#x4E2D;&#x4F4D;&#x7F6E;&#xFF0C;&#x6765;&#x4EE3;&#x66FF;&#x6574;&#x4F53;&#x6C34;&#x5E73;&#x3002;</p>
+<p>&#x672C;&#x671F;&#x6211;&#x4EEC;&#x8981;&#x8BB2;&#x4E0E;&#x4E4B;&#x5BF9;&#x5E94;&#x7684;&#x4E09;&#x4E2A;&#x6570;&#xFF1A;&#x5F02;&#x4F17;&#x6BD4;&#x7387;&#x3001;&#x56DB;&#x5206;&#x4F4D;&#x5DEE;&#x3001;&#x6807;&#x51C6;&#x5DEE;&#x3002;&#x5B83;&#x4EEC;&#x53CD;&#x6620;&#x7684;&#x662F;&#x5404;&#x53D8;&#x91CF;&#x503C;&#x8FDC;&#x79BB;&#x5176;&#x4E2D;&#x5FC3;&#x503C;&#x7684;&#x7A0B;&#x5EA6;&#x3002;&#x6216;&#x8005;&#x8BF4;&#xFF0C;&#x53CD;&#x6620;&#x51FA;&#x4F17;&#x6570;&#x3001;&#x4E2D;&#x4F4D;&#x6570;&#x3001;&#x5E73;&#x5747;&#x6570;&#x80FD;&#x4E0D;&#x80FD;&#x4EE3;&#x8868;&#x4E00;&#x7EC4;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x6570;&#x636E;&#x7684;&#x79BB;&#x6563;&#x7A0B;&#x5EA6;&#x8D8A;&#x5927;&#xFF0C;&#x96C6;&#x4E2D;&#x6570;&#x503C;&#x5BF9;&#x8BE5;&#x7EC4;&#x6570;&#x636E;&#x7684;&#x4EE3;&#x8868;&#x6027;&#x5C31;&#x8D8A;&#x5DEE;&#xFF1B;&#x79BB;&#x6563;&#x7A0B;&#x5EA6;&#x8D8A;&#x5C0F;&#xFF0C;&#x5176;&#x4EE3;&#x8868;&#x6027;&#x5C31;&#x8D8A;&#x597D;&#x3002;</p>
+<p><img src="../../media/15974889664989.jpg" alt=""></p>
+<h2 id="&#x4F17;&#x6570;&#x80FD;&#x4E0D;&#x80FD;&#x4EE3;&#x8868;&#x4E00;&#x7EC4;&#x6570;&#x636E;&#xFF1F;">&#x4F17;&#x6570;&#x80FD;&#x4E0D;&#x80FD;&#x4EE3;&#x8868;&#x4E00;&#x7EC4;&#x6570;&#x636E;&#xFF1F;</h2>
+<p>&#x4F17;&#x6570;&#x80FD;&#x4E0D;&#x80FD;&#x4EE3;&#x8868;&#x4E00;&#x7EC4;&#x6570;&#x636E;&#xFF1F;&#x6211;&#x4EEC;&#x8981;&#x770B;&#x5F02;&#x4F17;&#x6BD4;&#x7387;&#x3002;</p>
+<p>&#x5F02;&#x4F17;&#x6BD4;&#x7387;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x8861;&#x91CF;&#x4F17;&#x6570;&#x5BF9;&#x4E00;&#x7EC4;&#x6570;&#x636E;&#x7684;&#x4EE3;&#x8868;&#x7A0B;&#x5EA6;&#xFF0C;&#x662F;&#x6307;&#x975E;&#x4F17;&#x6570;&#x7EC4;&#x7684;&#x9891;&#x6570;&#x5360;&#x603B;&#x9891;&#x6570;&#x7684;&#x6BD4;&#x4F8B;&#x3002;</p>
+<ul>
+<li>&#x5F02;&#x4F17;&#x6BD4;&#x7387;&#x8D8A;&#x5927;&#xFF0C;&#x8BF4;&#x660E;&#x975E;&#x4F17;&#x6570;&#x7EC4;&#x7684;&#x9891;&#x6570;&#x5360;&#x603B;&#x9891;&#x6570;&#x7684;&#x6BD4;&#x91CD;&#x8D8A;&#x5927;&#xFF0C;&#x4F17;&#x6570;&#x7684;&#x4EE3;&#x8868;&#x6027;&#x8D8A;&#x5DEE;&#xFF1B;</li>
+<li>&#x5F02;&#x4F17;&#x6BD4;&#x7387;&#x8D8A;&#x5C0F;&#xFF0C;&#x8BF4;&#x660E;&#x975E;&#x4F17;&#x6570;&#x7EC4;&#x7684;&#x9891;&#x6570;&#x5360;&#x603B;&#x9891;&#x6570;&#x7684;&#x6BD4;&#x91CD;&#x8D8A;&#x5C0F;&#xFF0C;&#x4F17;&#x6570;&#x7684;&#x4EE3;&#x8868;&#x6027;&#x8D8A;&#x597D;&#x3002;</li>
+</ul>
+<h2 id="&#x4E2D;&#x4F4D;&#x6570;&#x80FD;&#x4E0D;&#x80FD;&#x4EE3;&#x8868;&#x4E00;&#x7EC4;&#x6570;&#x636E;&#xFF1F;">&#x4E2D;&#x4F4D;&#x6570;&#x80FD;&#x4E0D;&#x80FD;&#x4EE3;&#x8868;&#x4E00;&#x7EC4;&#x6570;&#x636E;&#xFF1F;</h2>
+<p>&#x4E2D;&#x4F4D;&#x6570;&#x80FD;&#x4E0D;&#x80FD;&#x4EE3;&#x8868;&#x4E00;&#x7EC4;&#x6570;&#x636E;&#xFF1F;&#x6211;&#x4EEC;&#x8981;&#x770B;&#x6781;&#x5DEE;&#x548C;&#x56DB;&#x5206;&#x4F4D;&#x5DEE;&#x3002;</p>
+<p>&#x56DB;&#x5206;&#x4F4D;&#x5DEE;&#x4E5F;&#x79F0;&#x4E3A;&#x5185;&#x8DDD;&#x6216;&#x56DB;&#x5206;&#x95F4;&#x8DDD;&#xFF0C;&#x5B83;&#x662F;&#x4E0A;&#x56DB;&#x5206;&#x4F4D;&#x6570;&#x4E0E;&#x4E0B;&#x56DB;&#x5206;&#x4F4D;&#x6570;&#x4E4B;&#x5DEE;&#xFF0C;&#x7528;Q&#x8868;&#x793A;&#x3002;</p>
+<p>&#x56DB;&#x5206;&#x4F4D;&#x5DEE;&#x53CD;&#x6620;&#x4E86;&#x4E2D;&#x95F4;50&#xFF05;&#x7684;&#x6570;&#x636E;&#x7684;&#x79BB;&#x6563;&#x7A0B;&#x5EA6;&#xFF0C;&#x6570;&#x503C;&#x8D8A;&#x5C0F;&#xFF0C;&#x8BF4;&#x660E;&#x4E2D;&#x95F4;&#x7684;&#x6570;&#x636E;&#x8D8A;&#x96C6;&#x4E2D;&#xFF1B;&#x6570;&#x503C;&#x8D8A;&#x5927;&#xFF0C;&#x8BF4;&#x660E;&#x4E2D;&#x95F4;&#x7684;&#x6570;&#x636E;&#x8D8A;&#x5206;&#x6563;&#x3002;</p>
+<p>&#x56DB;&#x5206;&#x4F4D;&#x5DEE;&#x4E0D;&#x53D7;&#x6781;&#x503C;&#x7684;&#x5F71;&#x54CD;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x7531;&#x4E8E;&#x4E2D;&#x4F4D;&#x6570;&#x5904;&#x4E8E;&#x6570;&#x636E;&#x7684;&#x4E2D;&#x95F4;&#x4F4D;&#x7F6E;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x56DB;&#x5206;&#x4F4D;&#x5DEE;&#x7684;&#x5927;&#x5C0F;&#x5728;&#x4E00;&#x5B9A;&#x7A0B;&#x5EA6;&#x4E0A;&#x8BF4;&#x660E;&#x4E86;&#x4E2D;&#x4F4D;&#x6570;&#x5BF9;&#x4E00;&#x7EC4;&#x6570;&#x636E;&#x7684;&#x4EE3;&#x8868;&#x7A0B;&#x5EA6;&#x3002;</p>
+<p>&#x6B64;&#x5916;&#xFF0C;&#x6781;&#x5DEE;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x8861;&#x91CF;&#x4E2D;&#x4F4D;&#x6570;&#x7684;&#x4EE3;&#x8868;&#x6027;&#x3002;&#x6781;&#x5DEE;&#xFF0C;&#x662F;&#x4E00;&#x7EC4;&#x6570;&#x636E;&#x7684;&#x6700;&#x5927;&#x503C;&#x4E0E;&#x6700;&#x5C0F;&#x503C;&#x4E4B;&#x5DEE;&#xFF0C;&#x4E5F;&#x79F0;&#x5168;&#x8DDD;&#x3002;</p>
+<p>&#x6781;&#x5DEE;&#x662F;&#x6700;&#x7B80;&#x5355;&#x7684;&#x63CF;&#x8FF0;&#x6570;&#x636E;&#x79BB;&#x6563;&#x7A0B;&#x5EA6;&#x7684;&#x6D4B;&#x5EA6;&#x503C;&#xFF0C;&#x8BA1;&#x7B97;&#x7B80;&#x5355;&#xFF0C;&#x6613;&#x4E8E;&#x7406;&#x89E3;&#x3002;&#x662F;&#x8001;&#x767E;&#x59D3;&#x6700;&#x5BB9;&#x6613;&#x76F4;&#x89C2;&#x611F;&#x53D7;&#x5230;&#x7684;&#x201C;&#x5DEE;&#x201D;&#x3002;&#x6BD4;&#x5982;&#x540C;&#x9F84;&#x7684;&#x4E00;&#x6CE2;&#x5E74;&#x8F7B;&#x4EBA;&#x91CC;&#xFF0C;&#x6536;&#x5165;&#x6700;&#x9AD8;&#x7684;&#x5F20;&#x4E09;&#x548C;&#x6536;&#x5165;&#x6700;&#x4F4E;&#x7684;&#x674E;&#x56DB;&#xFF0C;&#x6536;&#x5165;&#x5DEE;&#x5F88;&#x591A;&#x3002;&#x4F46;&#x5B83;&#x5BB9;&#x6613;&#x53D7;&#x6781;&#x7AEF;&#x503C;&#x7684;&#x5F71;&#x54CD;&#x3002;</p>
+<p>&#x5728;&#x6570;&#x636E;&#x79D1;&#x5B66;&#x9886;&#x57DF;&#xFF0C;&#x5F88;&#x5C11;&#x7528;&#x6781;&#x5DEE;&#x548C;&#x56DB;&#x5206;&#x4F4D;&#x5DEE;&#xFF1A;&#x7531;&#x4E8E;&#x6781;&#x5DEE;&#x548C;&#x56DB;&#x5206;&#x4F4D;&#x5DEE;&#x53EA;&#x662F;&#x5229;&#x7528;&#x4E86;&#x4E00;&#x7EC4;&#x6570;&#x636E;&#x7684;&#x4E2A;&#x522B;&#x6570;&#x503C;&#x4FE1;&#x606F;&#xFF0C;&#x4E0D;&#x80FD;&#x53CD;&#x6620;&#x51FA;&#x6574;&#x4F53;&#x6570;&#x636E;&#x7684;&#x5206;&#x6563;&#x72B6;&#x51B5;&#xFF0C;&#x56E0;&#x800C;&#x4E0D;&#x80FD;&#x51C6;&#x786E;&#x63CF;&#x8FF0;&#x51FA;&#x6570;&#x636E;&#x7684;&#x5206;&#x6563;&#x7A0B;&#x5EA6;&#x3002;</p>
+<h2 id="&#x5E73;&#x5747;&#x6570;&#x80FD;&#x4E0D;&#x80FD;&#x4EE3;&#x8868;&#x4E00;&#x7EC4;&#x6570;&#x636E;&#xFF1F;">&#x5E73;&#x5747;&#x6570;&#x80FD;&#x4E0D;&#x80FD;&#x4EE3;&#x8868;&#x4E00;&#x7EC4;&#x6570;&#x636E;&#xFF1F;</h2>
+<p>&#x5E73;&#x5747;&#x6570;&#x80FD;&#x4E0D;&#x80FD;&#x4EE3;&#x8868;&#x4E00;&#x7EC4;&#x6570;&#x636E;&#xFF1F;&#x6211;&#x4EEC;&#x8981;&#x770B;&#x65B9;&#x5DEE;&#x548C;&#x6807;&#x51C6;&#x5DEE;&#x3002;</p>
+<p>&#x65B9;&#x5DEE;&#x662F;&#x5404;&#x53D8;&#x91CF;&#x503C;&#x4E0E;&#x5176;&#x5E73;&#x5747;&#x6570;&#x79BB;&#x5DEE;&#x5E73;&#x65B9;&#x7684;&#x5E73;&#x5747;&#x6570;&#x3002;&#x5B83;&#x5728;&#x6570;&#x5B66;&#x5904;&#x7406;&#x4E0A;&#x901A;&#x8FC7;&#x5E73;&#x65B9;&#x7684;&#x529E;&#x6CD5;&#x6D88;&#x53BB;&#x79BB;&#x5DEE;&#x7684;&#x6B63;&#x8D1F;&#x53F7;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x8FDB;&#x884C;&#x5E73;&#x5747;&#x3002;</p>
+<p>&#x65B9;&#x5DEE;&#xFF08;&#x6216;&#x6807;&#x51C6;&#x5DEE;&#xFF09;&#x80FD;&#x8F83;&#x597D;&#x5730;&#x53CD;&#x6620;&#x51FA;&#x6570;&#x636E;&#x7684;&#x79BB;&#x6563;&#x7A0B;&#x5EA6;&#xFF0C;&#x662F;&#x5E94;&#x7528;&#x6700;&#x5E7F;&#x7684;&#x79BB;&#x6563;&#x7A0B;&#x5EA6;&#x7684;&#x6D4B;&#x5EA6;&#x503C;&#x3002;&#x6837;&#x672C;&#x65B9;&#x5DEE;&#x7684;&#x7B26;&#x53F7;&#x662F;$s^2$&#x3002;</p>
+<p>&#x6839;&#x636E;&#x672A;&#x5206;&#x7EC4;&#x6570;&#x636E;&#x8BA1;&#x7B97;&#x5E73;&#x5747;&#x5DEE;&#x516C;&#x5F0F;&#x4E3A;&#xFF1A;</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>s</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><msubsup><mo>&#x2211;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></msubsup><mo>(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>&#x2212;</mo><mi>&#x3BC;</mi><msup><mo>)</mo><mn>2</mn></msup></mrow><mrow><mi>n</mi><mo>&#x2212;</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex"> s^2=\frac{\sum_{i=1}^N (x_i-\mu)^2}{n-1} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.178072em;"></span><span class="strut bottom" style="height:1.581403em;vertical-align:-0.403331em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">s</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">=</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">n</span><span class="mbin mtight">&#x2212;</span><span class="mord mathrm mtight">1</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.534707em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mop mtight"><span class="mop op-symbol small-op mtight" style="top:0.074995em;">&#x2211;</span><span class="msupsub"><span class="vlist"><span style="top:0.32101em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord scriptscriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">1</span></span></span></span><span style="top:-0.43100000000000005em;margin-right:0.07142857142857144em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.10903em;">N</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen mtight">(</span><span class="mord mtight"><span class="mord mathit mtight">x</span><span class="msupsub"><span class="vlist"><span style="top:0.143em;margin-right:0.07142857142857144em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin mtight">&#x2212;</span><span class="mord mathit mtight">&#x3BC;</span><span class="mclose mtight"><span class="mclose mtight">)</span><span class="msupsub"><span class="vlist"><span style="top:-0.431em;margin-right:0.07142857142857144em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span> </p>
+<p>&#x6839;&#x636E;&#x5206;&#x7EC4;&#x6570;&#x636E;&#x8BA1;&#x7B97;&#x5E73;&#x5747;&#x5DEE;&#x7684;&#x516C;&#x5F0F;&#x4E3A;&#xFF1A;</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>s</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><msubsup><mo>&#x2211;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></msubsup><mo>(</mo><msub><mi>M</mi><mi>i</mi></msub><mo>&#x2212;</mo><mi>&#x3BC;</mi><msup><mo>)</mo><mn>2</mn></msup><msub><mi>f</mi><mi>i</mi></msub></mrow><mrow><mi>n</mi><mo>&#x2212;</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex"> s^2=\frac{\sum_{i=1}^k (M_i-\mu)^2f_i}{n-1} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.183627em;"></span><span class="strut bottom" style="height:1.586958em;vertical-align:-0.403331em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">s</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">=</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">n</span><span class="mbin mtight">&#x2212;</span><span class="mord mathrm mtight">1</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.534707em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mop mtight"><span class="mop op-symbol small-op mtight" style="top:0.074995em;">&#x2211;</span><span class="msupsub"><span class="vlist"><span style="top:0.32101em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord scriptscriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">1</span></span></span></span><span style="top:-0.43100000000000005em;margin-right:0.07142857142857144em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen mtight">(</span><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist"><span style="top:0.143em;margin-right:0.07142857142857144em;margin-left:-0.10903em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin mtight">&#x2212;</span><span class="mord mathit mtight">&#x3BC;</span><span class="mclose mtight"><span class="mclose mtight">)</span><span class="msupsub"><span class="vlist"><span style="top:-0.431em;margin-right:0.07142857142857144em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist"><span style="top:0.143em;margin-right:0.07142857142857144em;margin-left:-0.10764em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span></p>
+<p>&#x65B9;&#x5DEE;&#x5F00;&#x6839;&#x53F7;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x6807;&#x51C6;&#x5DEE;&#x3002;&#x6837;&#x672C;&#x6807;&#x51C6;&#x5DEE;&#x7528; $ s $ &#x8868;&#x793A;&#x3002;</p>
+<p>&#x6807;&#x51C6;&#x5DEE;&#x7684;&#x8BA1;&#x91CF;&#x5355;&#x4F4D; &#x4E0E; &#x53D8;&#x91CF;&#x503C;&#x7684;&#x8BA1;&#x91CF;&#x5355;&#x4F4D;&#x76F8;&#x540C;&#xFF0C;&#x5176;&#x5B9E;&#x9645;&#x610F;&#x4E49;&#x8981;&#x6BD4;&#x65B9;&#x5DEE;&#x6E05;&#x695A;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5728;&#x5BF9;&#x5B9E;&#x9645;&#x95EE;&#x9898;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x65F6;&#x66F4;&#x591A;&#x5730;&#x4F7F;&#x7528;&#x6807;&#x51C6;&#x5DEE;&#x3002;</p>
+<p>&#x5E73;&#x5747;&#x5DEE;&#x4EE5;&#x5E73;&#x5747;&#x6570;&#x4E3A;&#x4E2D;&#x5FC3;&#xFF0C;&#x53CD;&#x6620;&#x4E86;&#x6BCF;&#x4E2A;&#x6570;&#x636E;&#x4E0E;&#x5E73;&#x5747;&#x6570;&#x7684;&#x5E73;&#x5747;&#x5DEE;&#x5F02;&#x7A0B;&#x5EA6;&#xFF0C;&#x5B83;&#x80FD;&#x5168;&#x9762;&#x51C6;&#x786E;&#x5730;&#x53CD;&#x6620;&#x4E00;&#x7EC4;&#x6570;&#x636E;&#x7684;&#x79BB;&#x6563;&#x72B6;&#x51B5;&#x3002;&#x5E73;&#x5747;&#x5DEE;&#x8D8A;&#x5927;&#xFF0C;&#x8BF4;&#x660E;&#x6570;&#x636E;&#x7684;&#x79BB;&#x6563;&#x7A0B;&#x5EA6;&#x8D8A;&#x5927;&#xFF1B;&#x53CD;&#x4E4B;&#xFF0C;&#x5219;&#x8BF4;&#x660E;&#x6570;&#x636E;&#x7684;&#x79BB;&#x6563;&#x7A0B;&#x5EA6;&#x8D8A;&#x5C0F;&#x3002;</p>
+<h2 id="&#x7528;&#x6807;&#x51C6;&#x5DEE;&#x68C0;&#x9A8C;&#x79BB;&#x7FA4;&#x6570;&#x636E;">&#x7528;&#x6807;&#x51C6;&#x5DEE;&#x68C0;&#x9A8C;&#x79BB;&#x7FA4;&#x6570;&#x636E;</h2>
+<p>&#x6709;&#x4E86;&#x5E73;&#x5747;&#x6570;&#x548C;&#x6807;&#x51C6;&#x5DEE;&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x7528;&#x5B83;&#x4EEC;&#x6765;&#x5224;&#x65AD;&#x4E00;&#x7EC4;&#x6570;&#x636E;&#x662F;&#x5426;&#x6709;&#x79BB;&#x7FA4;&#x6570;&#x636E;&#x3002;&#x8FD9;&#x5C5E;&#x4E8E;&#x7ECF;&#x9A8C;&#x4E4B;&#x8C08;&#xFF0C;&#x4E00;&#x822C;&#x6709;&#x300C;&#x7ECF;&#x9A8C;&#x6CD5;&#x5219;&#x300D;&#x548C;&#x300C;&#x5207;&#x6BD4;&#x96EA;&#x592B;&#x4E0D;&#x7B49;&#x5F0F;&#x300D;&#x53EF;&#x4F9B;&#x53C2;&#x8003;&#x3002;</p>
+<p><strong>(1)&#x6570;&#x636E;&#x5206;&#x5E03;&#x5BF9;&#x79F0;&#xFF1A;&#x7ECF;&#x9A8C;&#x6CD5;&#x5219;</strong></p>
+<p>&#x5F53;&#x4E00;&#x7EC4;&#x6570;&#x636E;<strong>&#x5206;&#x5E03;&#x5BF9;&#x79F0;</strong>&#x65F6;&#xFF0C;&#x7ECF;&#x9A8C;&#x6CD5;&#x5219;&#x8868;&#x660E;&#x7684;&#x6982;&#x62EC;&#x6027;&#x5EA6;&#x91CF;&#xFF1A;</p>
+<ul>
+<li>&#x7EA6;&#x6709;68&#xFF05;&#x7684;&#x6570;&#x636E;&#x5728;&#x5E73;&#x5747;&#x6570;&#xB1;1&#x4E2A;&#x6807;&#x51C6;&#x5DEE;&#x7684;&#x8303;&#x56F4;&#x4E4B;&#x5185;&#x3002;</li>
+<li>&#x7EA6;&#x6709;95&#xFF05;&#x7684;&#x6570;&#x636E;&#x5728;&#x5E73;&#x5747;&#x6570;&#xB1;2&#x4E2A;&#x6807;&#x51C6;&#x5DEE;&#x7684;&#x8303;&#x56F4;&#x4E4B;&#x5185;&#x3002;</li>
+<li>&#x7EA6;&#x6709;99&#xFF05;&#x7684;&#x6570;&#x636E;&#x5728;&#x5E73;&#x5747;&#x6570;&#xB1;3&#x4E2A;&#x6807;&#x51C6;&#x5DEE;&#x7684;&#x8303;&#x56F4;&#x4E4B;&#x5185;&#x3002;</li>
+</ul>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x5728;&#x5E73;&#x5747;&#x6570;&#xB1;3&#x4E2A;&#x6807;&#x51C6;&#x5DEE;&#x7684;&#x8303;&#x56F4;&#x5185;&#x51E0;&#x4E4E;&#x5305;&#x542B;&#x4E86;&#x5168;&#x90E8;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x5728;&#xB1;3&#x4E2A;&#x6807;&#x51C6;&#x5DEE;&#x4E4B;&#x5916;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x7B97;&#x4F5C;&#x662F;&#x79BB;&#x7FA4;&#x70B9;(outlier)&#x3002;</p>
+<p><strong>(2)&#x6570;&#x636E;&#x5206;&#x5E03;&#x4E0D;&#x5BF9;&#x79F0;&#xFF1A;&#x5207;&#x6BD4;&#x96EA;&#x592B;&#x4E0D;&#x7B49;&#x5F0F;</strong></p>
+<p>&#x5F53;&#x4E00;&#x7EC4;&#x6570;&#x636E;<strong>&#x5206;&#x5E03;&#x4E0D;&#x5BF9;&#x79F0;</strong>&#x65F6;&#xFF0C;&#x8FD9;&#x65F6;&#x53EF;&#x4F7F;&#x7528;&#x5207;&#x6BD4;&#x96EA;&#x592B;&#x4E0D;&#x7B49;&#x5F0F;&#x3002;</p>
+<p>&#x5207;&#x6BD4;&#x96EA;&#x592B;&#x4E0D;&#x7B49;&#x5F0F;&#x63D0;&#x4F9B;&#x7684;&#x662F;&#x201C;&#x4E0B;&#x754C;&#x201D;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x201D;&#x6240;&#x5360;&#x6BD4;&#x4F8B;&#x81F3;&#x5C11;&#x662F;&#x591A;&#x5C11;&#x201C;&#xFF0C;&#x5B83;&#x5BF9;&#x4EFB;&#x4F55;&#x5206;&#x5E03;&#x5F62;&#x6001;&#x7684;&#x6570;&#x636E;&#x90FD;&#x9002;&#x7528;&#x3002;</p>
+<p>&#x6839;&#x636E;&#x5207;&#x6BD4;&#x96EA;&#x592B;&#x4E0D;&#x7B49;&#x5F0F;&#xFF0C;&#x81F3;&#x5C11;&#x6709;(1-1/k^2)&#x7684;&#x6570;&#x636E;&#x843D;&#x5728;&#xB1;k&#x4E2A;&#x6807;&#x51C6;&#x5DEE;&#x4E4B;&#x5185;&#x3002;&#x5176;&#x4E2D;k&#x662F;&#x5927;&#x4E8E;1&#x7684;&#x4EFB;&#x610F;&#x503C;&#xFF0C;&#x4F46;&#x4E0D;&#x4E00;&#x5B9A;&#x662F;&#x6574;&#x6570;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;k=2,3,4,&#x8BE5;&#x4E0D;&#x7B49;&#x5F0F;&#x7684;&#x542B;&#x4E49;&#x662F;&#xFF1A;</p>
+<ul>
+<li>&#x81F3;&#x5C11;&#x6709;75&#xFF05;&#x7684;&#x6570;&#x636E;&#x5728;&#x5E73;&#x5747;&#x6570;&#xB1;2&#x4E2A;&#x6807;&#x51C6;&#x5DEE;&#x7684;&#x8303;&#x56F4;&#x4E4B;&#x5185;</li>
+<li>&#x81F3;&#x5C11;&#x6709;89&#xFF05;&#x7684;&#x6570;&#x636E;&#x5728;&#x5E73;&#x5747;&#x6570;&#xB1;3&#x4E2A;&#x6807;&#x51C6;&#x5DEE;&#x7684;&#x8303;&#x56F4;&#x4E4B;&#x5185;</li>
+<li>&#x81F3;&#x5C11;&#x6709;94&#xFF05;&#x7684;&#x6570;&#x636E;&#x5728;&#x5E73;&#x5747;&#x6570;&#xB1;4&#x4E2A;&#x6807;&#x51C6;&#x5DEE;&#x7684;&#x8303;&#x56F4;&#x4E4B;&#x5185;</li>
+</ul>
+<h2 id="&#x66F4;&#x5E73;&#x6DE1;&#x7684;&#x770B;&#x5E73;&#x5747;&#x6570;">&#x66F4;&#x5E73;&#x6DE1;&#x7684;&#x770B;&#x5E73;&#x5747;&#x6570;</h2>
+<p>&#x5728;&#x751F;&#x6D3B;&#x4E2D;&#x6211;&#x4EEC;&#x5927;&#x5BB6;&#x503E;&#x5411;&#x4E8E;&#x628A;&#x81EA;&#x5DF1;&#x6BD4;&#x4F5C;&#x201C;&#x4E00;&#x822C;&#x201D;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x667A;&#x5546;&#x662F;&#x5E73;&#x5747;&#x667A;&#x5546;&#x3002;&#x540C;&#x65F6;&#xFF0C;&#x53C8;&#x503E;&#x5411;&#x4E8E;&#x628A;&#x81EA;&#x5DF1;&#x4E0E;&#x201C;&#x4E00;&#x822C;&#x201D;&#x53BB;&#x505A;&#x6BD4;&#x8F83;&#x3002;&#x6211;&#x4EEC;&#x628A;&#x6536;&#x5165;&#x4E0E;&#x5E73;&#x5747;&#x6536;&#x5165;&#x4F5C;&#x6BD4;&#x8F83;&#x3002;&#x6211;&#x4EEC;&#x628A;&#x79DF;&#x91D1;&#x548C;&#x5E73;&#x5747;&#x79DF;&#x91D1;&#x4F5C;&#x6BD4;&#x8F83;&#x3002;&#x6211;&#x4EEC;&#x628A;&#x4F53;&#x91CD;&#x548C;&#x6211;&#x4EEC;&#x8FD9;&#x4E2A;&#x5E74;&#x7EAA;&#x7684;&#x4EBA;&#x5E73;&#x5747;&#x4F53;&#x91CD;&#x4F5C;&#x6BD4;&#x8F83;&#x3002;</p>
+<p>&#x5728;&#x8FD9;&#x4E9B;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x5747;&#x503C;&#x662F;&#x6BD4;&#x6BD4;&#x7686;&#x662F;&#x7684;&#x3002;&#x5C31;&#x5176;&#x5E73;&#x5747;&#x6570;&#x672C;&#x8EAB;&#x800C;&#x8A00;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x4EA7;&#x751F;&#x4E25;&#x91CD;&#x7684;&#x8BEF;&#x5BFC;&#x3002;&#x628A;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x548C;&#x90A3;&#x4E2A;&#x5355;&#x4E00;&#x7684;&#x7EDF;&#x8BA1;&#x6570;&#x5B57;&#x4F5C;&#x6BD4;&#x8F83;&#xFF0C;&#x4F1A;&#x7ED9;&#x6211;&#x4EEC;&#x9519;&#x8BEF;&#x7684;&#x5931;&#x8D25;&#x611F;&#x2026;&#x6216;&#x8005;&#x81EA;&#x8C6A;&#x611F;&#x3002;</p>
+<p>&#x800C;&#x5B66;&#x4E86;&#x672C;&#x7AE0;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x6216;&#x8BB8;&#x53EF;&#x4EE5;&#x66F4;&#x8FDB;&#x4E00;&#x6B65;&#xFF0C;&#x66F4;&#x7406;&#x6027;&#x5730;&#x8BA4;&#x8BC6;&#x5230;&#xFF0C;&#x8FD9;&#x53D6;&#x51B3;&#x4E8E;&#x6570;&#x636E;&#x7684;&#x5206;&#x5E03;&#x65B9;&#x5F0F;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x4E5F;&#x8BB8;&#x522B;&#x518D;&#x62FF;&#x81EA;&#x5DF1;&#x548C;&#x666E;&#x901A;&#x4EBA;&#x6BD4;&#x4E86;&#x2026;&#x6216;&#x8005;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x771F;&#x7684;&#x575A;&#x6301;&#x8981;&#x6BD4;&#xFF0C;&#x522B;&#x53EA;&#x5173;&#x6CE8;&#x5E73;&#x5747;&#x6570;&#xFF0C;&#x6700;&#x8D77;&#x7801;&#x4E5F;&#x770B;&#x4E00;&#x4E0B;&#x6807;&#x51C6;&#x5DEE;&#x3002;</p>
+<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
+<p><img src="../../media/15974889664989.jpg" alt=""></p>
+<p>&#x53C2;&#x8003;&#x6587;&#x732E;&#xFF1A;</p>
+<ol>
+<li>&#x5B59;&#x9759;&#x5A1F;&#x4E3B;&#x7F16;.&#x300A;&#x7EDF;&#x8BA1;&#x5B66;&#x300B;.&#x6E05;&#x534E;&#x5927;&#x5B66;&#x51FA;&#x7248;&#x793E;.2015&#xFF1A;18-20.</li>
+<li>&#x8881;&#x536B;,&#x5218;&#x8D85;.&#x300A;&#x7EDF;&#x8BA1;&#x5B66;--&#x601D;&#x60F3;&#x3001;&#x65B9;&#x6CD5;&#x4E0E;&#x5E94;&#x7528;&#x300B;(&#x7B2C;&#x4E8C;&#x7248;).&#x4E2D;&#x56FD;&#x4EBA;&#x6C11;&#x5927;&#x5B66;&#x51FA;&#x7248;&#x793E;.2011.</li>
+<li>&#x8D3E;&#x4FCA;&#x5E73;,&#x4F55;&#x6653;&#x7FA4;,&#x91D1;&#x52C7;&#x8FDB;.&#x300A;&#x7EDF;&#x8BA1;&#x5B66;&#x300B;(&#x7B2C;&#x4E03;&#x7248;).&#x4E2D;&#x56FD;&#x4EBA;&#x6C11;&#x5927;&#x5B66;&#x51FA;&#x7248;&#x793E;.2018.</li>
+</ol>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="3P5数据的集中位置.html" class="navigation navigation-prev " aria-label="Previous page: 数据的集中位置">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="3P7数据的分布形态.html" class="navigation navigation-next " aria-label="Next page: 数据的分布形态">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数据的离散程度","level":"3.1.6","depth":2,"next":{"title":"数据的分布形态","level":"3.1.7","depth":2,"path":"post/chapter2/3P7数据的分布形态.md","ref":"post/chapter2/3P7数据的分布形态.md","articles":[]},"previous":{"title":"数据的集中位置","level":"3.1.5","depth":2,"path":"post/chapter2/3P5数据的集中位置.md","ref":"post/chapter2/3P5数据的集中位置.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","katex@^1.1.3","flowchart@^1.1.0","theme-comscore"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"katex":{},"flowchart":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{}},"theme":"default","author":"Qiaoshengchuan","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"从浅入深统计学","language":"zh-hans","gitbook":"3.2.3"},"file":{"path":"post/chapter2/3P6数据的离散程度.md","mtime":"2020-08-29T10:05:30.324Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-06T09:19:29.321Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
